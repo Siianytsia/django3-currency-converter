@@ -1,0 +1,46 @@
+body {
+  background-color: honeydew;
+}
+
+label {
+  font-size: large;
+}
+
+.converter_form {
+  height: 400px;
+  width: 400px;
+  margin: auto;
+  margin-top: 100px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgb(7, 192, 131);
+  border-radius: 7px;
+  background-color: cadetblue;
+  text-align: center;
+  padding-top: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#from_curr, #to_curr, #amount {
+  border-style: none;
+  border-radius: 7px;
+  width: 300px;
+  height: 30px;
+}
+
+#convert_butt {
+  height: 30px;
+  width: 100px;
+  border-style: none;
+  border-radius: 7px;
+  background-color: rgb(6, 197, 223);
+}
+
+.amount {
+  background-color: honeydew;
+  border-style: none;
+  border-radius: 7px;
+  height: 50px;
+  width: 300px;
+  margin: auto;
+}

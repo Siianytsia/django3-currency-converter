@@ -1,0 +1,49 @@
+{% extends 'converter/base.html' %}
+
+{% block title %}Converter{% endblock %}
+
+{% block content %}
+
+<div class="converter_form">
+    <form method="post">
+        {% csrf_token %}
+        <label for="from_curr">From Currency</label>
+        <br>
+        <select name="from-curr" id="from_curr">
+            {% for curr in currencies %}
+                <option value="{{ curr }}" {% if from_curr == curr %} selected {% endif %}>{{ curr }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <br>
+        <label for="to_curr">To Currency</label>
+        <br>
+        <select name="to-curr" id="to_curr">
+            {% for curr in currencies %}
+                <option value="{{ curr }}" {% if to_curr == curr %} selected {% endif %}>{{ curr }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <br>
+        <label for="to_curr">Amount</label>
+        <br>
+        <input type="number" id="amount" placeholder="Enter the number" {% if from_amount %} value="{{ from_amount }}" {% endif %} name="from-amount">
+        <br>
+        <br>
+        <button id="convert_butt">Convert</button>
+        <hr>
+        {% if converted_amount %}
+            <div class="converted">
+                <h3>Converted Amount</h3>
+                <div class="amount">
+                    {{ converted_amount }}
+                </div>
+            </div>
+        {% endif %}
+    </form>
+</div>
+
+{% endblock %}
+
+
+
